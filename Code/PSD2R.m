@@ -4,7 +4,7 @@ freqbands = {[4 7];[8 12];[13 30];[31 45]};
 [who_idx,ID,EEG_ID,EEG_name,patient,elim,P1,P2,P3,P4,P5,Panss_pos,Panss_neg,Panns_gen,Panss_comp,...
      Panss_thought] = get_subjects(whichsubject);
 
-filename=['/media/sv/Elements/22q11/22q11_PowerSpectrum.csv'];
+filename=['/media/sv/Elements/PowerSpectrum.csv'];
 if exist(filename,'file')==2,delete(filename),end
 resultfileData = fopen(filename,'at');
 
