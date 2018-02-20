@@ -14,7 +14,7 @@ Note that the code provided here consists basically of wrapper functions that re
 * configuration (cfg) file: this file specifies all variable aspects of your analysis (paths to data files, sampling rate, filter setting, etc.).
 
 * SubjectsTable.xlsx (a sample is included in this repository): An Excel spreadsheet containing a list of your subjects and information about these datasets. Important columns in this table are:
-  Name: several funcions expect this column, which contains a name, code or pseudonym for each dataset.
+  "Name", which contains a name, code or pseudonym for each dataset.
 
 ### Eventaully, you may want to have also a column for:
 
