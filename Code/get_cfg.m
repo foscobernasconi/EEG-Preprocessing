@@ -2,7 +2,7 @@ function [cfg, S] = get_cfg(S,EEG_name)
 
 %% Read info for this subject and get file names and dirctories.
 rootfilename = which('get_cfg.m');
-rootpath     = '/media/sv/Elements/22q11/';
+rootpath     = '/media/sv/';
 
 cfg.dir_main = rootpath;
 cfg.subject_name  = EEG_name;
@@ -75,8 +75,8 @@ cfg.new_sampling_rate = 512;
 
 %% Interpolate missing channels after ICA:
 cfg.interpolMissingChan = 1;
-cfg.chanlocsBE4interpol = '/home/sv/Matlabtoolboxes/Analysis_Data_Scripts/22q11/Code/chanlocsBE4interpol.mat';
-cfg.chanlocsBE4interpol_noRefChan = '/home/sv/Matlabtoolboxes/Analysis_Data_Scripts/22q11/Code/chanlocsBE4interpol_noRefChan.mat';
+cfg.chanlocsBE4interpol = '/home/sv/Matlabtoolboxes/Analysis_Data_Scripts/Code/chanlocsBE4interpol.mat';
+cfg.chanlocsBE4interpol_noRefChan = '/home/sv/Matlabtoolboxes/Analysis_Data_Scripts/Code/chanlocsBE4interpol_noRefChan.mat';
 
 %% Filter parameters
 % Do you want to high-pass filter the data?
