@@ -1,11 +1,11 @@
-### EEG-Preprocessing
+# EEG-Preprocessing
 
 Matlab functions for preprocessing of electroencephalography (EEG) data.
 
 The functions can be used to import the EEG data into Matlab and run through the most common preprocessing steps (filtering, epoching, etc.). 
 Note that the code provided here consists basically of wrapper functions that rely on functions from the EEGLAB toolbox & fieldtrip toolbox for Matlab.
 
-## What you need:
+### What you need:
 
 * EEGLAB/Fieldtrip
 
@@ -13,13 +13,10 @@ Note that the code provided here consists basically of wrapper functions that re
 
 * configuration (cfg) file: this file specifies all variable aspects of your analysis (paths to data files, sampling rate, filter setting, etc.).
 
-* SubjectsTable.xlsx (a sample is included in this repository): An Excel spreadsheet containing a list of your subjects and information about these datasets.
+* SubjectsTable.xlsx (a sample is included in this repository): An Excel spreadsheet containing a list of your subjects and information about these datasets. Important columns in this table are:
+  Name: several funcions expect this column, which contains a name, code or pseudonym for each dataset.
 
-*Important columns in this table are:
-
-Name: several funcions expect this column, which contains a name, code or pseudonym for each dataset.
-
-## Eventaully, you may want to have also a column for:
+### Eventaully, you may want to have also a column for:
 
 * replace_chans: sometimes electrodes are broken and are replaced during recording with an external electrode. Suppose electrodes 31 and 45 are broken and are to be replaced with external electrodes 71 and 72, respectively. The information in this column should read: 31,71;45,72
 
