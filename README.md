@@ -9,14 +9,13 @@ Note that the code provided here consists basically of wrapper functions that re
 
 * EEGLAB/Fieldtrip
 
-plugins: SASICA (optional: Cleanline, erplab and erptools)
+* plugins: SASICA (optional: Cleanline, erplab and erptools)
 
-Needed:
-- configuration (cfg) file: this file specifies all variable aspects of your analysis (paths to data files, sampling rate, filter setting, etc.).
+* configuration (cfg) file: this file specifies all variable aspects of your analysis (paths to data files, sampling rate, filter setting, etc.).
 
-- SubjectsTable.xlsx (a sample is included in this repository): An Excel spreadsheet containing a list of your subjects and information about these datasets.
+* SubjectsTable.xlsx (a sample is included in this repository): An Excel spreadsheet containing a list of your subjects and information about these datasets.
 
-Important columns in this table are:
+*Important columns in this table are:
 
 Name: several funcions expect this column, which contains a name, code or pseudonym for each dataset.
 
