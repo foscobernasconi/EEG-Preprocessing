@@ -19,7 +19,7 @@ Important columns in this table are:
 
 * "Name", which contains a name, code or pseudonym for each dataset.
 
-Eventaully, you may want to have also a column for:
+Eventually, you may want to have also a column for:
 
 * "replace_chans": sometimes electrodes are broken and are replaced during recording with an external electrode. Suppose electrodes 31 and 45 are broken and are to be replaced with external electrodes 71 and 72, respectively. The information in this column should read: 31,71;45,72
 
