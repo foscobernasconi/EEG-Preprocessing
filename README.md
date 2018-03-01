@@ -11,6 +11,8 @@ Note that the code provided here consists basically of wrapper functions that re
 
 * plugins: SASICA (optional: Cleanline, erplab and erptools)
 
+* Important: if you want to use 'binica' on linux 64bits make sure to: sudo apt-get install lib32z1 (as binica is coded on 32bits).  
+
 * configuration (cfg) file: this file specifies all variable aspects of your analysis (paths to data files, sampling rate, filter setting, etc.).
 
 * SubjectsTable.xlsx (a sample is included in this repository): An Excel spreadsheet containing a list of your subjects and information about these datasets. 
