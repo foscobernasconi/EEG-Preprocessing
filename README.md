@@ -28,3 +28,7 @@ Eventually, you may want to have also a column for:
 * "interp_chans": sometimes you discover that an electrode was dysfunction, but you did not record an external electrode to replace it with. You can still interpolate this electrode entirely.
 
 * "ica_ncomps": by default, ICA calculates automatically the number of independent components to estimate, or you can set a fixed number in the cfg file. But sometimes a dataset will not compute with either procedure. In such cases, it sometimes helps to have ICA estimate a much smaller number of ICs. This number can be set here.
+
+
+
+Suggestions & Aknowledgments are always welcome
