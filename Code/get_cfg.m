@@ -39,10 +39,8 @@ cfg.data_chansAfter = [1:203];
 cfg.data_chans = 1:length(cfg.data_urchans);
 
 % Indicate if you want to remove channels
-cfg.rmchanels = 1;
-cfg.rmchanum = [31,67,73,82,91,92,102,111,120,133,145,165,174,...
-    187,199,208,209,216,217,218,219,225,226,227,228,229,230,231,...
-    232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257];
+cfg.rmchanels = 0;
+cfg.rmchanum  = [];
 
 % what to select bad electrodes à la fieldtrip?
 cfg.detectbadchanels = 1;
