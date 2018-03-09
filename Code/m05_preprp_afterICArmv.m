@@ -48,46 +48,13 @@ for isub = 1:length(who_idx)
         %visual inspection:
         global eegrej
 
-        mypop_eegplot(EEG,1,1,0,'submean','off','command','global eegrej, eegrej = TMPREJ'); % 'winlength',8
-
+        pop_eegplot(EEG,1,1,1);
+        
         disp('Interrupting function now. Waiting for you to press')
         disp('"Update marks", and hit "Continue" in Matlab editor menu')        
         keyboard
 
-        % eegplot2trial cannot deal with multi-rejection
-        if ~isempty(eegrej)
-            trials_to_delete = [];
-            badChnXtrl       = [];
-            rejTime          = [];
-            
-            rejTime = eegrej(:,1:2);
-            [~,firstOccurences,~] = unique(rejTime,'rows');
-            eegrej = eegrej(firstOccurences,:);
-
-            [badtrls, badChnXtrl] = eegplot2trial(eegrej,EEG.pnts,length(EEG.epoch));
-            trials_to_delete = find(badtrls);
-            clear eegrej;
-
-            % -------------------------------------
-            %  Execute SELECTIVE interpolation and rejection
-            % -------------------------------------
-            EEG = pop_selectiveinterp(EEG,badChnXtrl);
-            [EEG, com] = pop_rejepoch(EEG, trials_to_delete, 1);
-            EEG = eegh(com,EEG);
-
-        end
-        
-        % ----------------------------------------
-        %  Execute on all data set interpolation
-        % ----------------------------------------
-        % do you want to interpolate extra chans?
-        interpchan = inputdlg('Channels to interpolate [numeric values]','Interpolate?');
-        if~isempty(str2num(interpchan{:}))            
-            [EEG,com]  = pop_interp(EEG,str2num(interpchan{:}),'spherical');
-            EEG = eegh(com, EEG);
-        end
-    end
-    
+   
     if cfg.do_reref_after_ica
         [EEG, com] = pop_reref(EEG,[],'keepref','on');
         EEG = eegh(com, EEG);
