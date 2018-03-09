@@ -70,12 +70,13 @@ for isub = 1:length(who_idx)
     Index_heog = find(contains({EEG.chanlocs.labels},'HEOG'));
     noEOGchans = [Index_veog Index_heog];
     if noEOGchans ~=0
-        Chns = EEG.nbchan-length(noEOGchans)
+        chans = EEG.nbchan;
+        chans(noEOGchans) = [];
     else
-        Chns = EEG.nbchan;
+        chans = EEG.nbchan;
     end
        
-    for s=1:Chns % this assumes that eog are the last electrodes
+    for s=1:chans
         sensorvar(s,:) = max(level(s,:));
     end
     
