@@ -31,4 +31,4 @@ Eventually, you may want to have also a column for:
 
 
 
-### Suggestions & Acknowledgments are always welcome
+### Suggestions are always welcome
